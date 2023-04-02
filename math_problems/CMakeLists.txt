@@ -3,11 +3,21 @@ project(math_problems VERSION 0.1.0)
 
 find_package(gtest REQUIRED)
 
-add_executable(task1 task1.cpp)
-add_executable(task2_gcd task2_gcd.cpp)
-add_executable(task3_lcm task3_lcm.cpp)
-add_executable(task4 task4.cpp)
-add_executable(task5 task5_sexy_primes.cpp)
+file(GLOB MAIN_FILES "*.m.cpp")
+foreach(MAIN_FILE ${MAIN_FILES})
+  message("Found main file: ${MAIN_FILE}")
+  get_filename_component(MAIN_NAME ${MAIN_FILE} NAME_WE)
+
+  # Create a test target for this file
+  add_executable(${MAIN_NAME} ${MAIN_FILE})
+endforeach()
+
+
+#add_executable(task1 task1.cpp)
+#add_executable(task2_gcd task2_gcd.cpp)
+#add_executable(task3_lcm task3_lcm.cpp)
+#add_executable(task4 task4.cpp)
+#add_executable(task5 task5_sexy_primes.cpp)
 
 
 # Find all test files in the directory

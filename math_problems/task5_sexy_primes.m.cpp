@@ -1,10 +1,16 @@
 #include "task5_sexy_primes.h"
-#include "io_utils.hpp"
+#include "io_utils.h"
 
 #include <string_view>
 
 auto print_result(uint32_t limit, const sexy_primes &result) -> void
 {
+    if (result.empty()) {
+        utils::io::formatted_print(
+            "There is no pairs of sexy prime numbers up to the {}:", limit);
+        return;
+    }
+
     utils::io::formatted_print("Pairs of the sexy primes up to the {}:", limit);
     for (const auto &sexy_pair : result) {
         utils::io::formatted_print(

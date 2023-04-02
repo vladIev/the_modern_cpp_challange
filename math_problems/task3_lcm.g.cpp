@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "math_utils.hpp"
+#include "math_utils.h"
 
 TEST(task3_tests, lcm_test)
 {

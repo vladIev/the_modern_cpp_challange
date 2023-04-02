@@ -1,5 +1,5 @@
-#include "io_utils.hpp"
-#include "math_utils.hpp"
+#include "io_utils.h"
+#include "math_utils.h"
 
 
 auto main(int argc, char **argv) -> int
