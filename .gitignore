@@ -1,0 +1,10 @@
+
+build/
+
+TODO
+
+CMakeUserPresets.json
+
+.vscode/
+
+.venv/

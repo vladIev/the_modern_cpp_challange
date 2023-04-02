@@ -1,0 +1,41 @@
+CompileFlags:
+  # Treat code as C++, use C++20 standard, enable more warnings.
+  Add: [-std=c++20]
+  # Remove extra warnings specified in compile commands.
+  # Single value is also acceptable, same as "Remove: [-mabi]"
+  Remove: -mabi
+Diagnostics:
+  # Tweak Clang-Tidy checks.
+  ClangTidy:
+    Add: [
+      - performance*,
+      - modernize*,
+      - readability*, 
+      - google-explicit-constructor
+    ]
+    Remove: [
+      - modernize-use-trailing-return-type,
+      - altera-struct-pack-align,
+      - llvmlibc-*,
+      - cert-dcl21-cpp,
+      - hicpp-avoid-c-arrays,
+      - cppcoreguidelines-avoid-c-arrays,
+      - cppcoreguidelines-pro-type-union-access,
+      - cppcoreguidelines-pro-type-reinterpret-cast,
+      - cppcoreguidelines-pro-type-const-cast,
+      - cppcoreguidelines-pro-bounds-pointer-arithmetic,
+      - google-readability-todo,
+      - fuchsia-overloaded-operator,
+      - fuchsia-default-arguments-calls,
+      - modernize-use-trailing-return-type,
+      - modernize-avoid-c-arrays
+    ]
+    CheckOptions:
+      readability-identifier-naming.NamespaceCase: lower_case
+      readability-identifier-naming.PrivateMemberPrefix: _
+      readability-identifier-naming.FunctionCase: CamelCase
+      readability-identifier-naming.VariableCase: lower_case
+      readability-identifier-naming.ParameterCase: lower_case
+      readability-identifier-naming.GlobalConstantCase: CamelCase
+      readability-identifier-naming.GlobalConstantPrefix: k
+    
