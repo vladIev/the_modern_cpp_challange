@@ -32,5 +32,19 @@ namespace math {
 
         return true;
     }
+
+    auto get_sum_of_divisors(uint32_t number) -> uint64_t
+    {
+        uint64_t result = 1;
+        const auto num_sqrt = static_cast<uint32_t>(std::sqrt(number));
+        for (auto i = 2u; i <= num_sqrt; i++) {
+            if (number % i == 0) {
+                const auto div_result = number / i;
+                result += i;
+                if (div_result != i) { result += div_result; }
+            }
+        }
+        return result;
+    }
 }// namespace math
 }// namespace utils
