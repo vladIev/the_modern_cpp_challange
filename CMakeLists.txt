@@ -8,10 +8,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 include(CTest)
 enable_testing()
 
-include_directories(${CMAKE_SOURCE_DIR}/utils)
+include_directories(${CMAKE_SOURCE_DIR}/src/utils)
 
 
-add_subdirectory("math_problems")
+add_subdirectory("${CMAKE_SOURCE_DIR}/src/math_problems")
 
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
