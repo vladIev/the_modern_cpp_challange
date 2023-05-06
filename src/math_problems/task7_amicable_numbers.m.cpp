@@ -26,6 +26,7 @@ auto main(int argc, char **argv) -> int
         "Program prints all amicable pairs of numbers tu to a millon."
         "Two numbers are abicable fi the sum of the proper divisors of one "
         "number is equal to that of the other number itself\n";
+    utils::io::formatted_print(invitation);
     const auto output = get_amicables_number_upto_limit(LIMIT);
     print_result(LIMIT, output);
 

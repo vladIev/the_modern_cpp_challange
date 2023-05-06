@@ -23,6 +23,7 @@ auto main(int argc, char **argv) -> int
     const auto LIMIT = 1'000;
     std::string_view invitation =
         "Program prints all armstrong numbers up to 1000.\n ";
+    utils::io::formatted_print(invitation);
     const auto output = armstrong_numbers_in_range(0, LIMIT);
     print_result(LIMIT, output);
 

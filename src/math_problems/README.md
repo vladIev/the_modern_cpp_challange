@@ -23,20 +23,6 @@ Write a program that prints the list of all pairs of amicable numbers smaller th
 ### 8. Armstrong numbers
 Write a program that prints all Armstrong numbers with three digits.
 
-### 9. Prime factors of a number
-Write a program that prints the prime factors of a number entered by the user.
-
 ### 10. Gray code
 Write a program that displays the normal binary representations, Gray code representations, and decoded Gray code values for all 5-bit numbers.
 
-### 11. Converting numerical values to Roman
-Write a program that, given a number entered by the user, prints its Roman numeral equivalent.
-
-### 12. Largest Collatz sequence
-Write a program that determines and prints which number up to 1 million produces the longest Collatz sequence and what its length is.
-
-### 13. Computing the value of Pi
-Write a program that computes the value of Pi with a precision of two decimal digits.
-
-### 14. Validating ISBNs
-Write a program that validates that 10-digit values entered by the user, as a string, represent valid ISBN-10 numbers.

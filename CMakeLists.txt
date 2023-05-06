@@ -6,12 +6,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Include CTest-specific macros and functions
 include(CTest)
+include("${CMAKE_SOURCE_DIR}/cmake/cmake_utils.cmake")
 enable_testing()
 
 include_directories(${CMAKE_SOURCE_DIR}/src/utils)
 
 
 add_subdirectory("${CMAKE_SOURCE_DIR}/src/math_problems")
+add_subdirectory("${CMAKE_SOURCE_DIR}/src/language_features")
 
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
