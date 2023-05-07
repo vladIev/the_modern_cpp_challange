@@ -1,3 +1,15 @@
+function(add_dirs_as_subdirs)
+    # Get a list of all subdirectories in the directory containing the CMakeLists.txt file
+    FILE(GLOB CHILD_DIRS ${CMAKE_CURRENT_LIST_DIR}/*)
+    # Loop through each subdirectory and add it as a subdirectory of the current project
+    foreach(SUBDIR ${CHILD_DIRS})
+        if(IS_DIRECTORY ${SUBDIR})
+            message("Found directory ${SUBDIR}")
+            add_subdirectory(${SUBDIR})
+        endif()
+    endforeach()
+endfunction()
+
 function(add_main_files)
     file(GLOB MAIN_FILES "*.m.cpp")
     file(GLOB CPP_FILES "*.cpp")

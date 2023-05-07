@@ -9,6 +9,8 @@ include(CTest)
 include("${CMAKE_SOURCE_DIR}/cmake/cmake_utils.cmake")
 enable_testing()
 
+find_package(gtest REQUIRED)
+
 include_directories(${CMAKE_SOURCE_DIR}/src/utils)
 
 

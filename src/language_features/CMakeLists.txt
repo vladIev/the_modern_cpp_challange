@@ -1,1 +1,1 @@
-add_subdirectory(task1)
+add_dirs_as_subdirs()

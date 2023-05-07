@@ -1,4 +1,4 @@
-#include "task8_armstrong_numbers.h"
+#include "task10_graycode.h"
 #include <gtest/gtest.h>
 
 
