@@ -1,5 +1,5 @@
 ## Tasks
-### 1. int to hex
+### 1. Pascal triangle
 Write a programm that draws a Pascale triangle of entered size. Example: 
 <pre>
         1   
