@@ -16,6 +16,9 @@ include_directories(${CMAKE_SOURCE_DIR}/src/utils)
 
 add_subdirectory("${CMAKE_SOURCE_DIR}/src/math_problems")
 add_subdirectory("${CMAKE_SOURCE_DIR}/src/language_features")
+add_subdirectory("${CMAKE_SOURCE_DIR}/src/strings_and_regexps")
+add_subdirectory("${CMAKE_SOURCE_DIR}/src/streams_and_filesystem")
+
 
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})

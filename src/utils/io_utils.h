@@ -16,6 +16,7 @@ namespace io {
             std::cout << userInvitation << std::endl;
         }
         ReturnType input{ 0 };
+
         while (!(std::cin >> input)) {
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
