@@ -6,3 +6,4 @@ This repository contains my solutions for tasks from the book ["The modern C++ C
 * [Chapter 2. Language features](https://github.com/vladIev/the_modern_cpp_challange/tree/main/src/language_features)
 * [Chapter 3. Strings and regexps](https://github.com/vladIev/the_modern_cpp_challange/tree/main/src/strings_and_regexps)
 * [Chapter 4. Streams and filesystem](https://github.com/vladIev/the_modern_cpp_challange/tree/main/src/streams_and_filesystem)
+* [Chapter 5. Date and time](https://github.com/vladIev/the_modern_cpp_challange/tree/main/src/date_and_time)
