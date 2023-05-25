@@ -7,3 +7,5 @@ This repository contains my solutions for tasks from the book ["The modern C++ C
 * [Chapter 3. Strings and regexps](https://github.com/vladIev/the_modern_cpp_challange/tree/main/src/strings_and_regexps)
 * [Chapter 4. Streams and filesystem](https://github.com/vladIev/the_modern_cpp_challange/tree/main/src/streams_and_filesystem)
 * [Chapter 5. Date and time](https://github.com/vladIev/the_modern_cpp_challange/tree/main/src/date_and_time)
+* [Chapter 6. Algorithms and data structures](https://github.com/vladIev/the_modern_cpp_challange/tree/main/src/algorithms_and_data_structures)
+* [Chapter 7. Concurrency](https://github.com/vladIev/the_modern_cpp_challange/tree/main/src/concurrency)

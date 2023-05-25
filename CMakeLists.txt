@@ -20,6 +20,7 @@ add_subdirectory("${CMAKE_SOURCE_DIR}/src/strings_and_regexps")
 add_subdirectory("${CMAKE_SOURCE_DIR}/src/streams_and_filesystem")
 add_subdirectory("${CMAKE_SOURCE_DIR}/src/date_and_time")
 add_subdirectory("${CMAKE_SOURCE_DIR}/src/algorithms_and_data_structures")
+add_subdirectory("${CMAKE_SOURCE_DIR}/src/concurrency")
 
 
 
