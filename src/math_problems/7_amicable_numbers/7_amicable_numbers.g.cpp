@@ -1,4 +1,4 @@
-#include "task7_amicable_numbers.h"
+#include "7_amicable_numbers.h"
 #include <gtest/gtest.h>
 
 

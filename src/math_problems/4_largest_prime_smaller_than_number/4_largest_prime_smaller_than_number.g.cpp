@@ -1,4 +1,4 @@
-#include "task4.h"
+#include "4_largest_prime_smaller_than_number.h"
 
 #include <gtest/gtest.h>
 

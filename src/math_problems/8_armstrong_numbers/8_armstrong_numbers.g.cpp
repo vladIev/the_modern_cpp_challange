@@ -1,4 +1,4 @@
-#include "task8_armstrong_numbers.h"
+#include "8_armstrong_numbers.h"
 #include <gtest/gtest.h>
 
 

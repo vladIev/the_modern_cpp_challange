@@ -1,5 +1,5 @@
 #include "io_utils.h"
-#include "task8_armstrong_numbers.h"
+#include "8_armstrong_numbers.h"
 
 #include <string_view>
 #include <vector>

@@ -1,4 +1,4 @@
-#include "task6_abundant_numbers.h"
+#include "6_abundant_numbers.h"
 #include "io_utils.h"
 
 #include <string_view>

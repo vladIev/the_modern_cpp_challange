@@ -1,4 +1,4 @@
-#include "task1.h"
+#include "1_sum_of_naturals_div_by_3_and_5.h"
 
 #include <limits>
 

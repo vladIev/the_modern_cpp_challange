@@ -1,5 +1,5 @@
 #include "io_utils.h"
-#include "task10_graycode.h"
+#include "10_graycode.h"
 
 #include <string_view>
 #include <vector>

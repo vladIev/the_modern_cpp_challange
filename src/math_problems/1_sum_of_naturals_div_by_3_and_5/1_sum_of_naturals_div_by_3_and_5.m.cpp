@@ -1,5 +1,5 @@
 #include "io_utils.h"
-#include "task1.h"
+#include "1_sum_of_naturals_div_by_3_and_5.h"
 
 auto main(int argc, char **argv) -> int
 {

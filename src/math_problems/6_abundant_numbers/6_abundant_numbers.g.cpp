@@ -1,4 +1,4 @@
-#include "task6_abundant_numbers.h"
+#include "6_abundant_numbers.h"
 #include "math_utils.h"
 
 #include <gtest/gtest.h>
