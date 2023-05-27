@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.2.0)
-project(ipv4_type VERSION 0.1.0)
+project(password_validator VERSION 0.1.0)
 
 add_main_files()
 add_test_files()
