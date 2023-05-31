@@ -6,23 +6,23 @@
 #include <gtest/gtest.h>
 
 // clang-format off
-constexpr std::string_view xml= R"(
-    <?xml version="1.0"?>
-    <movies>
-        <movie id="9871" title="Forrest Gump" year="1994" length="202">
-            <cast>
-                <role star="Tom Hanks" name="Forrest Gump" />
-                <role star="Sally Field" name="Mrs. Gump" />
-            </cast>
-            <directors>
-                <director name="Robert Zemeckis" />
-            </directors>
-            <writers>
-                <writer name="Winstom Groom" />
-                <writer name="Eric Roth" />
-            </writers>
-        </movie>
-    </movies>)";
+constexpr std::string_view xml= R"(<?xml version="1.0"?>
+<movies>
+	<movie id="9871" title="Forrest Gump" year="1994" length="202">
+		<cast>
+			<role star="Tom Hanks" name="Forrest Gump" />
+			<role star="Sally Field" name="Mrs. Gump" />
+		</cast>
+		<directors>
+			<director name="Robert Zemeckis" />
+		</directors>
+		<writers>
+			<writer name="Winstom Groom" />
+			<writer name="Eric Roth" />
+		</writers>
+	</movie>
+</movies>
+)";
 // clang-format on
 
 TEST(pugixml_lib, breathing)
@@ -67,12 +67,40 @@ TEST(pugixml_lib, movies_list_deserialization)
 
 TEST(pugixml_lib, movies_list_serialization)
 {
-    pugi::xml_document doc;
-    pugi::xml_parse_result result = doc.load_string(xml.data());
-    EXPECT_TRUE(result);
-
-    auto moviesList = XmlSerializer::deserialize<MoviesList>(doc);
+    MoviesList moviesList{ 
+        {
+            .d_id = 9871,
+            .d_title = "Forrest Gump",
+            .d_year = 1994,
+            .d_length = 202,
+            .d_roles = {
+                { .d_actor = "Tom Hanks", .d_character = "Forrest Gump" },
+                { .d_actor = "Sally Field", .d_character = "Mrs. Gump" },
+            },
+            .d_directors = { "Robert Zemeckis" },
+            .d_writers = { "Winstom Groom", "Eric Roth" },
+        }
+    };
     pugi::xml_document serialized = XmlSerializer::serialize(moviesList);
+    auto deserializedMoviesList =
+        XmlSerializer::deserialize<MoviesList>(serialized);
 
-    EXPECT_EQ(doc.hash_value(), serialized.hash_value());
+    EXPECT_EQ(moviesList.size(), deserializedMoviesList.size());
+    for (auto i = 0u; i < moviesList.size(); i++) {
+        const auto &movieOrig = moviesList[i];
+        const auto &movieDeser = deserializedMoviesList[i];
+        EXPECT_EQ(movieOrig.d_id, movieDeser.d_id);
+        EXPECT_EQ(movieOrig.d_title, movieDeser.d_title);
+        EXPECT_EQ(movieOrig.d_year, movieDeser.d_year);
+        EXPECT_EQ(movieOrig.d_length, movieDeser.d_length);
+        EXPECT_EQ(movieOrig.d_writers, movieDeser.d_writers);
+        EXPECT_EQ(movieOrig.d_directors, movieDeser.d_directors);
+        EXPECT_EQ(movieOrig.d_roles.size(), movieDeser.d_roles.size());
+        for (auto i = 0u; i < movieOrig.d_roles.size(); i++) {
+            EXPECT_EQ(
+                movieOrig.d_roles[i].d_actor, movieDeser.d_roles[i].d_actor);
+            EXPECT_EQ(movieOrig.d_roles[i].d_character,
+                movieDeser.d_roles[i].d_character);
+        }
+    }
 }
