@@ -10,3 +10,4 @@ This repository contains my solutions for tasks from the book ["The modern C++ C
 * [Chapter 6. Algorithms and data structures](https://github.com/vladIev/the_modern_cpp_challange/tree/main/src/algorithms_and_data_structures)
 * [Chapter 7. Concurrency](https://github.com/vladIev/the_modern_cpp_challange/tree/main/src/concurrency)
 * [Chapter 8. Design patterns](https://github.com/vladIev/the_modern_cpp_challange/tree/main/src/design_patterns)
+* [Chapter 9. Data serialization](https://github.com/vladIev/the_modern_cpp_challange/tree/main/src/data_serialization)
