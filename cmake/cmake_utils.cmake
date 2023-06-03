@@ -11,6 +11,8 @@ function(add_dirs_as_subdirs)
 endfunction()
 
 function(add_main_files)
+    # Parse function arguments
+    set(LIBRARIES ${ARGN} GTest::gtest_main)
     file(GLOB MAIN_FILES "*.m.cpp")
     file(GLOB CPP_FILES "*.cpp")
     # Exclude files with postfix ".m.cpp" or ".g.cpp"
@@ -21,10 +23,16 @@ function(add_main_files)
         
         get_filename_component(MAIN_NAME ${MAIN_FILE} NAME_WE)
         add_executable(${MAIN_NAME} ${MAIN_FILE} ${CPP_FILES})
+
+        if(NOT "${LIBRARIES}" STREQUAL "")
+            target_link_libraries(${MAIN_NAME} ${LIBRARIES})
+        endif()
     endforeach()
 endfunction(add_main_files)
 
 function(add_test_files)
+    # Parse function arguments
+    set(LIBRARIES ${ARGN} GTest::gtest_main)
     # Find all test files in the directory
     file(GLOB TEST_FILES "*.g.cpp")
     file(GLOB CPP_FILES "*.cpp")
@@ -32,14 +40,14 @@ function(add_test_files)
     list(FILTER CPP_FILES EXCLUDE REGEX "\\.m\\.cpp$|\\.g\\.cpp$")
     # Create a test target for each test file
     foreach(TEST_FILE ${TEST_FILES})
-    # Extract the test name from the file name
+        # Extract the test name from the file name
         message("Found gtest file: ${TEST_FILE}")
         get_filename_component(TEST_NAME ${TEST_FILE} NAME_WE)
         set(TEST_TARGET "${TEST_NAME}.g")
 
         # Create a test target for this file
         add_executable(${TEST_TARGET} ${TEST_FILE}  ${CPP_FILES})
-        target_link_libraries(${TEST_TARGET} GTest::gtest_main)
+        target_link_libraries(${TEST_TARGET} ${LIBRARIES})
 
         # Register this test with CTest
         add_test(NAME ${TEST_TARGET} COMMAND ${TEST_TARGET})
