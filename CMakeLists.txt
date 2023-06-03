@@ -11,8 +11,11 @@ enable_testing()
 
 find_package(gtest REQUIRED)
 
+set(LIBS_PATH "${CMAKE_SOURCE_DIR}/libs")
+
 include_directories(${CMAKE_SOURCE_DIR}/src/utils)
 
+add_subdirectory("${CMAKE_SOURCE_DIR}/libs/ZipLib")
 
 add_subdirectory("${CMAKE_SOURCE_DIR}/src/math_problems")
 add_subdirectory("${CMAKE_SOURCE_DIR}/src/language_features")
@@ -23,6 +26,7 @@ add_subdirectory("${CMAKE_SOURCE_DIR}/src/algorithms_and_data_structures")
 add_subdirectory("${CMAKE_SOURCE_DIR}/src/concurrency")
 add_subdirectory("${CMAKE_SOURCE_DIR}/src/design_patterns")
 add_subdirectory("${CMAKE_SOURCE_DIR}/src/data_serialization")
+add_subdirectory("${CMAKE_SOURCE_DIR}/src/archives_images_databases")
 
 
 
