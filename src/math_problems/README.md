@@ -29,3 +29,9 @@ Write a program that prints prime factors of an positive integer.
 ### [10. Gray code](https://github.com/vladIev/the_modern_cpp_challange/tree/main/src/math_problems/10_graycode)
 Write a program that displays the normal binary representations, Gray code representations, and decoded Gray code values for all 5-bit numbers.
 
+### [11. Numerical value to Roman](https://github.com/vladIev/the_modern_cpp_challange/tree/main/src/math_problems/11_numbers_to_roman)
+Write a program that converts given numerical value to Roman representation.
+
+### [12. Collatz sequence](https://github.com/vladIev/the_modern_cpp_challange/tree/main/src/math_problems/12_collatz_seqence)
+Write a program that determines which number up to 1 million produces the longest Collatz sequence and what it's length is.
+
