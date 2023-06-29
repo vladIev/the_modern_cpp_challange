@@ -5,7 +5,7 @@
 #include <string>
 #include <regex>
 #include <filesystem>
-#include <format>
+#include <fmt/core.h>
 
 auto findMathcingFilesInArchive(const ZipArchive::Ptr &archive,
     std::string_view pattern) -> std::vector<std::string>
@@ -28,7 +28,7 @@ auto findMathcingFiles(std::string_view archivePath, std::string_view pattern)
     -> std::vector<std::string>
 {
     if (!std::filesystem::exists(archivePath)) {
-        throw std::runtime_error(std::format("File {} not found", archivePath));
+        throw std::runtime_error(fmt::format("File {} not found", archivePath));
     }
 
     const auto archive = ZipFile::Open(archivePath.data());

@@ -2,7 +2,7 @@
 #include "str_utils.h"
 
 #include <optional>
-#include <format>
+#include <fmt/core.h>
 
 namespace {
 auto str_to_int(std::string_view str) -> std::optional<int32_t>
@@ -18,7 +18,7 @@ auto ip_str_to_int(std::string_view str) -> int32_t
 {
     const auto nums = utils::str::split_string(str, '.');
     if (nums.size() != 4) {
-        throw std::invalid_argument(std::format("Invalid IP address {}", str));
+        throw std::invalid_argument(fmt::format("Invalid IP address {}", str));
     }
     int32_t result = 0;
     int32_t offset = 24;
@@ -26,7 +26,7 @@ auto ip_str_to_int(std::string_view str) -> int32_t
         auto part = str_to_int(num);
         if (!part) {
             throw std::invalid_argument(
-                std::format("Invalid IP address {}", str));
+                fmt::format("Invalid IP address {}", str));
         }
         result |= part.value() << offset;
         offset -= 8;

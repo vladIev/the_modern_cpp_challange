@@ -7,7 +7,7 @@ template<typename Units = std::chrono::milliseconds,
 struct exec_timer
 {
     template<typename F, typename... Args>
-        requires utils::ReturnsNotVoid<F, Args>
+        requires utils::ReturnsNotVoid<F, Args...>
     static auto duration(F &&f, Args &&...args)
     {
         auto start = Timer::now();
@@ -21,7 +21,7 @@ struct exec_timer
     }
 
     template<typename F, typename... Args>
-        requires utils::ReturnsVoid<F, Args>
+        requires utils::ReturnsVoid<F, Args...>
     static auto duration(F &&f, Args &&...args)
     {
         auto start = Timer::now();

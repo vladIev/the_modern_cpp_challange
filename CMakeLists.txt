@@ -9,7 +9,8 @@ include(CTest)
 include("${CMAKE_SOURCE_DIR}/cmake/cmake_utils.cmake")
 enable_testing()
 
-find_package(gtest REQUIRED)
+find_package(GTest)
+find_package(fmt)
 
 set(LIBS_PATH "${CMAKE_SOURCE_DIR}/libs")
 

@@ -12,7 +12,7 @@ endfunction()
 
 function(add_main_files)
     # Parse function arguments
-    set(LIBRARIES ${ARGN} GTest::gtest_main)
+    set(LIBRARIES ${ARGN} GTest::gtest fmt::fmt)
     file(GLOB MAIN_FILES "*.m.cpp")
     file(GLOB CPP_FILES "*.cpp")
     # Exclude files with postfix ".m.cpp" or ".g.cpp"
@@ -32,7 +32,7 @@ endfunction(add_main_files)
 
 function(add_test_files)
     # Parse function arguments
-    set(LIBRARIES ${ARGN} GTest::gtest_main)
+    set(LIBRARIES ${ARGN} gtest::gtest fmt::fmt)
     # Find all test files in the directory
     file(GLOB TEST_FILES "*.g.cpp")
     file(GLOB CPP_FILES "*.cpp")

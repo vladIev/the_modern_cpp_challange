@@ -21,8 +21,8 @@ auto ptransform(Iterator begin, Iterator end, Func f) -> void
     const auto chunk_size = length / num_threads;
 
     std::vector<std::future<void>> futures(num_threads - 1);
-    std::vector<std::jthread> threads(num_threads - 1);
-
+    std::vector<std::thread> threads(num_threads - 1);
+    
     Iterator chunk_start = begin;
     for (auto i = 0u; i < num_threads - 1; i++) {
         Iterator chunk_end = chunk_start;
@@ -32,11 +32,13 @@ auto ptransform(Iterator begin, Iterator end, Func f) -> void
             [=]() { std::transform(chunk_start, chunk_end, chunk_start, f); });
 
         futures[i] = task.get_future();
-        threads[i] = std::jthread(std::move(task));
+        threads[i] = std::thread(std::move(task));
         chunk_start = chunk_end;
     }
 
     std::transform(chunk_start, end, chunk_start, f);
 
     for (auto &future : futures) { future.get(); }
+    for (auto &thread : threads) { thread.join(); }
+
 }

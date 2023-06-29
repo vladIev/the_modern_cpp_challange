@@ -3,7 +3,7 @@
 #include <iostream>
 #include <limits>
 #include <string_view>
-#include <format>
+#include <fmt/core.h>
 
 #include "concepts.h"
 
@@ -34,8 +34,8 @@ namespace io {
     template<typename... Args>
     void formatted_print(std::string_view fmt, Args &&...args)
     {
-        std::cout << std::vformat(
-            fmt, std::make_format_args(std::forward<Args>(args)...))
+        std::cout << fmt::vformat(
+            fmt, fmt::make_format_args(std::forward<Args>(args)...))
                   << std::endl;
     }
 }// namespace io
