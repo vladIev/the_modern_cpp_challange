@@ -35,3 +35,6 @@ Write a program that converts given numerical value to Roman representation.
 ### [12. Collatz sequence](https://github.com/vladIev/the_modern_cpp_challange/tree/main/src/math_problems/12_collatz_sequence)
 Write a program that determines which number up to 1 million produces the longest Collatz sequence and what it's length is.
 
+### [13. Computing PI value](https://github.com/vladIev/the_modern_cpp_challange/tree/main/src/math_problems/13_compute_pi_value)
+Write a program that computes the value of PI with precision of 2 decimal digits.
+
