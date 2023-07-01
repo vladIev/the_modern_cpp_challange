@@ -38,3 +38,5 @@ Write a program that determines which number up to 1 million produces the longes
 ### [13. Computing PI value](https://github.com/vladIev/the_modern_cpp_challange/tree/main/src/math_problems/13_compute_pi_value)
 Write a program that computes the value of PI with precision of 2 decimal digits.
 
+### [14. ISBN validation](https://github.com/vladIev/the_modern_cpp_challange/tree/main/src/math_problems/14_isbn)
+Write a program that validates 10-digit isbn
