@@ -1,4 +1,4 @@
-#include "5_sexy_primes.h"
+#include "sexy_primes.hpp"
 
 #include <gtest/gtest.h>
 

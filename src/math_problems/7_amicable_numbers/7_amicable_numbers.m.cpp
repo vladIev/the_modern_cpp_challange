@@ -1,5 +1,5 @@
 #include "io_utils.h"
-#include "7_amicable_numbers.h"
+#include "amicable_numbers.hpp"
 
 #include <string_view>
 #include <vector>

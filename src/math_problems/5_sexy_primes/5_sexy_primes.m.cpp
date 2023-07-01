@@ -1,4 +1,4 @@
-#include "5_sexy_primes.h"
+#include "sexy_primes.hpp"
 #include "io_utils.h"
 
 #include <string_view>

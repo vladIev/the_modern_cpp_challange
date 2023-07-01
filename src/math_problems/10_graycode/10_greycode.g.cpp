@@ -1,4 +1,4 @@
-#include "10_graycode.h"
+#include "graycode.hpp"
 #include <gtest/gtest.h>
 
 

@@ -1,4 +1,4 @@
-#include "8_armstrong_numbers.h"
+#include "armstrong_numbers.hpp"
 #include <gtest/gtest.h>
 
 

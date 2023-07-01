@@ -1,5 +1,5 @@
 #include "io_utils.h"
-#include "4_largest_prime_smaller_than_number.h"
+#include "largest_prime.hpp"
 
 auto main(int argc, char **argv) -> int
 {

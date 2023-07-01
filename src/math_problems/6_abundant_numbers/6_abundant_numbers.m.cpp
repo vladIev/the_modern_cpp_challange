@@ -1,4 +1,4 @@
-#include "6_abundant_numbers.h"
+#include "abundant_numbers.hpp"
 #include "io_utils.h"
 
 #include <string_view>
