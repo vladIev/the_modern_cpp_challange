@@ -1,4 +1,4 @@
-#include "calculate_sum.hpp.hpp"
+#include "calculate_sum.hpp"
 
 #include <limits>
 
