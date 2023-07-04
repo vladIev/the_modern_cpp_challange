@@ -1,5 +1,6 @@
-#include <gtest/gtest.h>
 #include "math_utils.h"
+
+#include <gtest/gtest.h>
 
 TEST(task2_tests, gcd_test)
 {

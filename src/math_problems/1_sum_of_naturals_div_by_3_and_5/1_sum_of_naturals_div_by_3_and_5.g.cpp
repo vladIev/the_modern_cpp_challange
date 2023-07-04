@@ -4,7 +4,6 @@
 
 #include <gtest/gtest.h>
 
-// Demonstrate some basic assertions.
 TEST(task1_tests, happy_path)
 {
     EXPECT_EQ(calculateSum(42), 408);

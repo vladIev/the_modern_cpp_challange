@@ -3,7 +3,7 @@
 
 #include <string_view>
 
-auto print_result(uint32_t limit,
+auto printResult(uint32_t limit,
     const std::vector<abundant_and_abundance> &result) -> void
 {
     if (result.empty()) {
@@ -28,8 +28,8 @@ auto main(int argc, char **argv) -> int
         "the sum of its proper divisors is greater than the number itself\n"
         "Enter the limit:";
     const auto input = utils::io::getUserInput<uint32_t>(invitation);
-    const auto output = get_abundants_number_upto_limit(input);
-    print_result(input, output);
+    const auto output = getAbundantsNumberUptoLimit(input);
+    printResult(input, output);
 
     return 0;
 }

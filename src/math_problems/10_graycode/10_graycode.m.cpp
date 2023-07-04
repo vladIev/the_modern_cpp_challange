@@ -5,7 +5,7 @@
 #include <vector>
 #include <tuple>
 
-auto print_result(const auto &result) -> void
+auto printResult(const auto &result) -> void
 {
     utils::io::formatted_print("Binary - Encoded - decoded:");
     for (const auto &numbers : result) {
@@ -23,6 +23,6 @@ auto main(int argc, char **argv) -> int
         "values up to 32.\n ";
     utils::io::formatted_print(invitation);
     const auto output = solution(5);
-    print_result(output);
+    printResult(output);
     return 0;
 }

@@ -4,7 +4,7 @@
 #include <string_view>
 #include <vector>
 
-auto print_result(uint32_t limit, const amicable_pairs &result) -> void
+auto printResult(uint32_t limit, const amicable_pairs &result) -> void
 {
     if (result.empty()) {
         utils::io::formatted_print(
@@ -27,8 +27,8 @@ auto main(int argc, char **argv) -> int
         "Two numbers are abicable fi the sum of the proper divisors of one "
         "number is equal to that of the other number itself\n";
     utils::io::formatted_print(invitation);
-    const auto output = get_amicables_number_upto_limit(LIMIT);
-    print_result(LIMIT, output);
+    const auto output = getAmicablesNumberUptoLimit(LIMIT);
+    printResult(LIMIT, output);
 
     return 0;
 }

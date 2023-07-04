@@ -29,5 +29,5 @@ auto longestCollatz(uint32_t limit) -> std::pair<uint32_t, uint32_t>
         }
     }
 
-    return std::pair(maxNumber, maxLength);
+    return { maxNumber, maxLength };
 }

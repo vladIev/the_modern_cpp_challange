@@ -18,9 +18,10 @@ class IsbnValidator
     {
         auto weightedSum = std::accumulate(std::begin(isbn),
             std::end(isbn),
-            0u,
-            [w = 10](
-                auto sum, auto ch) mutable { return sum + (ch - '0') * w--; });
+            0U,
+            [weight = 10](auto sum, auto ch) mutable {
+                return sum + (ch - '0') * weight--;
+            });
         return weightedSum % 11 == 0;
     }
 

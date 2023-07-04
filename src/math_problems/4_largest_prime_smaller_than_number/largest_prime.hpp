@@ -2,7 +2,7 @@
 
 #include <cassert>
 
-uint32_t get_largest_prime(uint32_t limit)
+uint32_t getLargestPrime(uint32_t limit)
 {
     assert(limit > 1);
     for (auto i = limit - 1; i > 1; i--) {

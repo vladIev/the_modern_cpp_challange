@@ -7,13 +7,13 @@ double computePi(RandomEngine &engine,
     Distribution &distribution,
     uint32_t samples = 1'000'000)
 {
-    auto in_circle_samples_cntr = 0U;
+    auto inCircleSamplesCntr = 0U;
 
     for (auto i : std::views::iota(0U, samples)) {
         auto x = distribution(engine);
         auto y = distribution(engine);
-        if (y * y <= 1 - x * x) { in_circle_samples_cntr++; }
+        if (y * y <= 1 - x * x) { inCircleSamplesCntr++; }
     }
 
-    return 4.0 * in_circle_samples_cntr / samples;
+    return 4.0 * inCircleSamplesCntr / samples;
 }

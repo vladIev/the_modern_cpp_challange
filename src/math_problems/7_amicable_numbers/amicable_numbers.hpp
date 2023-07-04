@@ -4,7 +4,7 @@
 
 using amicable_numbers = std::pair<uint32_t, uint32_t>;
 using amicable_pairs = std::vector<amicable_numbers>;
-auto get_amicables_number_upto_limit(const auto limit) -> amicable_pairs
+auto getAmicablesNumberUptoLimit(const auto limit) -> amicable_pairs
 {
     std::vector<std::pair<uint32_t, uint32_t>> result;
     for (uint32_t i = 4; i < limit; i++) {
