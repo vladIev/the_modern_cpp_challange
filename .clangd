@@ -35,9 +35,9 @@ Diagnostics:
     CheckOptions:
       readability-identifier-naming.NamespaceCase: lower_case
       readability-identifier-naming.PrivateMemberPrefix: d_
-      readability-identifier-naming.FunctionCase: camelCase
-      readability-identifier-naming.VariableCase: lower_case
-      readability-identifier-naming.ParameterCase: lower_case
-      readability-identifier-naming.GlobalConstantCase: CamelCase
+      readability-identifier-naming.FunctionCase: camelBack
+      readability-identifier-naming.VariableCase: camelBack
+      readability-identifier-naming.ParameterCase: camelBack
+      readability-identifier-naming.GlobalConstantCase: UPPER_CASE
       readability-identifier-naming.GlobalConstantPrefix: k
     
