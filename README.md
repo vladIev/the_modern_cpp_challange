@@ -11,3 +11,13 @@ This repository contains my solutions for tasks from the book ["The modern C++ C
 * [Chapter 7. Concurrency](https://github.com/vladIev/the_modern_cpp_challange/tree/main/src/concurrency)
 * [Chapter 8. Design patterns](https://github.com/vladIev/the_modern_cpp_challange/tree/main/src/design_patterns)
 * [Chapter 9. Data serialization](https://github.com/vladIev/the_modern_cpp_challange/tree/main/src/data_serialization)
+
+## How to build
+
+```
+cd ${WorkspaceFolder}
+conan install . --build=missing -of=build
+cd build
+cmake --preset=conan-default ..
+cmake --build . --config Release
+```
