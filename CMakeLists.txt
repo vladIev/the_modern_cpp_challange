@@ -3,6 +3,7 @@ project(hello VERSION 0.1.0)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Include CTest-specific macros and functions
 include(CTest)
@@ -28,6 +29,7 @@ add_subdirectory("${CMAKE_SOURCE_DIR}/src/concurrency")
 add_subdirectory("${CMAKE_SOURCE_DIR}/src/design_patterns")
 add_subdirectory("${CMAKE_SOURCE_DIR}/src/data_serialization")
 add_subdirectory("${CMAKE_SOURCE_DIR}/src/archives_images_databases")
+add_subdirectory("${CMAKE_SOURCE_DIR}/src/cryptography")
 
 
 
