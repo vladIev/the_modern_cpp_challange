@@ -1,8 +1,9 @@
 #include "parallel_minmax.hpp"
 
 #include <algorithm>
-#include <random>
 #include <gtest/gtest.h>
+#include <numeric>
+#include <random>
 
 auto prepareTestData(int min, int max) -> std::vector<int>
 {
