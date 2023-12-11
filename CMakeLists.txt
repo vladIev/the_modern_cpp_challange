@@ -12,8 +12,8 @@ enable_testing()
 
 find_package(GTest REQUIRED)
 find_package(fmt REQUIRED)
-find_package(asio REQUIRED)
-include_directories(${asio_INCLUDE_DIRS})
+find_package(Boost REQUIRED asio)
+include_directories(${Boost_INCLUDE_DIR})
 include_directories(${fmt_INCLUDE_DIRS})
 include_directories(${GTest_INCLUDE_DIRS})
 
