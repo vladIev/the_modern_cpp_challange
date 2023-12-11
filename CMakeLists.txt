@@ -10,8 +10,13 @@ include(CTest)
 include("${CMAKE_SOURCE_DIR}/cmake/cmake_utils.cmake")
 enable_testing()
 
-find_package(GTest)
-find_package(fmt)
+find_package(GTest REQUIRED)
+find_package(fmt REQUIRED)
+find_package(asio REQUIRED)
+include_directories(${asio_INCLUDE_DIRS})
+include_directories(${fmt_INCLUDE_DIRS})
+include_directories(${GTest_INCLUDE_DIRS})
+
 
 set(LIBS_PATH "${CMAKE_SOURCE_DIR}/libs")
 
@@ -30,7 +35,7 @@ add_subdirectory("${CMAKE_SOURCE_DIR}/src/design_patterns")
 add_subdirectory("${CMAKE_SOURCE_DIR}/src/data_serialization")
 add_subdirectory("${CMAKE_SOURCE_DIR}/src/archives_images_databases")
 add_subdirectory("${CMAKE_SOURCE_DIR}/src/cryptography")
-
+add_subdirectory("${CMAKE_SOURCE_DIR}/src/networking_and_services")
 
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
